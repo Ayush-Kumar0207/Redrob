@@ -1,0 +1,9 @@
+dataset/
+*.zip
+*.npy
+candidates_ids.json
+*.csv
+*.log
+__pycache__/
+.git/
+.venv/

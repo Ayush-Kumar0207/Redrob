@@ -1,0 +1,82 @@
+# Redrob Hackathon — Submission Metadata
+# Copy this file to your repo root as `submission_metadata.yaml`
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "REPLACE_WITH_REGISTERED_TEAM_NAME"
+
+primary_contact:
+  name: "REPLACE_WITH_PRIMARY_CONTACT"
+  email: "REPLACE_WITH_EMAIL"
+  phone: "REPLACE_WITH_PHONE"
+
+team_members:
+  - name: "REPLACE_WITH_TEAM_MEMBER"
+    email: "REPLACE_WITH_EMAIL"
+    role: "ML Engineer / Full Stack"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "REPLACE_WITH_GITHUB_REPOSITORY_URL"
+
+sandbox_link: "REPLACE_WITH_SANDBOX_OR_PUBLIC_DOCKER_URL"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Windows 11 PC"
+  cpu_cores: 16
+  ram_gb: 16
+  python_version: "3.12"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+  pre_computation_description: "Default submitted pipeline is deterministic and requires no pre-computation."
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude"
+  - "ChatGPT / Codex"
+
+ai_usage_summary: |
+  Used Claude and ChatGPT/Codex for architecture discussion, code review, and implementation guidance.
+  All scoring logic, skill taxonomies, and ranking algorithms are original work
+  designed specifically for this challenge. No candidate data was fed to any LLM
+  during the ranking process. The ranking step is fully offline with zero API calls.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Deterministic 10-dimension calibrated ranker. A challenge-specific synthetic
+  template prior (0.36) is combined with title/career fit, fast structured
+  career-JD evidence, trajectory, assessments, experience, skills validation,
+  logistics, and education. Behavioral signals are used once in a weighted
+  availability modifier with explicit unreachable-candidate gates. Decisive
+  cross-field integrity checks remove synthetic honeypots without broadly
+  penalizing ordinary timeline noise. The submitted fast mode requires no
+  pre-computation, GPU, model download, or network. For 100,000 candidates on
+  CPU, measured runtime was 84.6s; a deterministic repeat took 82.3s and
+  produced the identical SHA-256 hash
+  5D3502CE69682631A433D3F7FD0E8A710CD01003B4E7FFE2B9648A3B8529B6A1.
+  The official validator passes; zero detected
+  honeypots and zero very-low-availability profiles in the submitted top 100.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

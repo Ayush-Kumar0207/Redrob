@@ -1,0 +1,9 @@
+# Redrob AI — Candidate Ranking System
+# Dependencies for scoring and embedding
+numpy>=1.24,<3
+scikit-learn>=1.3,<2
+# For the Hugging Face Spaces sandbox (app.py)
+gradio>=4,<7
+pandas>=2,<4
+# Pre-computation and Stage 2 Re-ranking:
+sentence-transformers>=2.2,<6
