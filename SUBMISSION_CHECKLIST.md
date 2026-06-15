@@ -2,13 +2,14 @@
 
 ## Must Complete Before Upload
 
-- [ ] Rename `submission.csv` to your registered participant ID, for example `team_xxx.csv`.
-- [ ] Replace every placeholder in `submission_metadata.yaml` with real team, GitHub, and sandbox details.
-- [ ] Declare all AI tools used, including ChatGPT/Codex.
-- [ ] Create and push a reachable GitHub repository.
-- [ ] Start Docker Desktop, build the image, and run a full container reproduction.
-- [ ] Publish a working sandbox or public Docker image link.
-- [ ] Export the final presentation deck to PDF and upload it with the ranked CSV.
+- [x] Create `686b95d376ce14837de12b88.csv` using the registered participant ID.
+- [x] Replace every placeholder in `submission_metadata.yaml` with verified team and repository details.
+- [x] Declare all AI tools used, including ChatGPT/Codex.
+- [x] Create a reachable public GitHub repository.
+- [x] Build the Docker image and run a full container reproduction.
+- [x] Publish a public Docker reproduction workflow through the GitHub repository.
+- [x] Export the final presentation deck to PDF.
+- [ ] Upload the participant-ID CSV and final PDF to the Hack2Skill portal.
 
 ## Reproduction Gate
 

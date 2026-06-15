@@ -4,6 +4,10 @@ A deterministic, CPU-only candidate ranking system for the IndiaRuns / Redrob
 Data & AI Challenge. It ranks 100,000 profiles for the **Senior AI Engineer -
 Founding Team** role and produces a recruiter-readable top-100 CSV.
 
+- **Team:** The Indic Protocol
+- **Participant ID:** `686b95d376ce14837de12b88`
+- **Repository:** <https://github.com/Ayush-Kumar0207/Redrob>
+
 ## Verified Snapshot
 
 Measured on the full released pool on Windows 11 / Python 3.12:
@@ -12,6 +16,7 @@ Measured on the full released pool on Windows 11 / Python 3.12:
 |---|---:|
 | Candidates ranked | 100,000 |
 | End-to-end runtime | 84.6 seconds; deterministic repeat: 82.3 seconds |
+| Docker full-pool runtime | 162.8 seconds |
 | Network calls during ranking | 0 |
 | GPU required | No |
 | Detected decisive integrity contradictions | 57 |
@@ -45,6 +50,11 @@ docker build -t redrob-ranker .
 docker run --rm -v "$PWD:/data" redrob-ranker \
   --candidates /data/candidates.jsonl --out /data/submission.csv
 ```
+
+The final `indic-protocol-redrob:submission` image was built from a clean
+`python:3.12-slim` base and completed the full 100,000-profile run in 162.8
+seconds. Its output passed the official validator and exactly matched the native
+submission SHA-256.
 
 ### Small-Sample Demo
 
@@ -163,6 +173,7 @@ SUBMISSION_CHECKLIST.md     remaining portal and publishing tasks
 ```
 
 Final deliverables are written to `submission.csv`,
+`686b95d376ce14837de12b88.csv`,
 `outputs/redrob_ai_ranker_submission_deck.pptx`, and
 `output/pdf/redrob_ai_ranker_submission_deck.pdf`.
 
@@ -171,8 +182,8 @@ Final deliverables are written to `submission.csv`,
 - Hidden-ground-truth performance cannot be known before organizers score it.
 - Template fingerprinting is intentionally challenge-specific and would be
   replaced by learned relevance features in a real production system.
-- Team identity, GitHub URL, and sandbox URL in `submission_metadata.yaml` must
-  be replaced before upload.
+- The public reproducibility URL points to this repository's Docker workflow;
+  the ranking system itself remains fully offline during execution.
 
 ## License
 

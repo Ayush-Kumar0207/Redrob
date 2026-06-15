@@ -1,0 +1,31 @@
+name: Submission CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install ranking dependencies
+        run: python -m pip install -r requirements-ranking.txt
+
+      - name: Compile and test
+        run: |
+          python -m compileall -q rank.py audit_submission.py validate_submission.py src tests
+          python -m unittest discover -s tests -v
+
+      - name: Validate portal-ready output
+        run: python validate_submission.py 686b95d376ce14837de12b88.csv
+
+      - name: Build reproduction image
+        run: docker build -t indic-protocol-redrob:submission .

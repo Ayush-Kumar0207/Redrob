@@ -4,26 +4,36 @@
 # ============================================================================
 # Team identity
 # ============================================================================
-team_name: "REPLACE_WITH_REGISTERED_TEAM_NAME"
+team_name: "The Indic Protocol"
+participant_id: "686b95d376ce14837de12b88"
 
 primary_contact:
-  name: "REPLACE_WITH_PRIMARY_CONTACT"
-  email: "REPLACE_WITH_EMAIL"
-  phone: "REPLACE_WITH_PHONE"
+  name: "Ayush Kumar"
+  email: "kumarayush70049@gmail.com"
+  phone: "Available in the Hack2Skill participant profile"
 
 team_members:
-  - name: "REPLACE_WITH_TEAM_MEMBER"
-    email: "REPLACE_WITH_EMAIL"
-    role: "ML Engineer / Full Stack"
+  - name: "Ayush Kumar"
+    email: "kumarayush70049@gmail.com"
+    role: "Team Leader"
+  - name: "Arsh Khan"
+    email: "Registered in the Hack2Skill team"
+    role: "Team Member"
+  - name: "ASRAFUL Hoque"
+    email: "Registered in the Hack2Skill team"
+    role: "Team Member"
+  - name: "Ravi Prashant"
+    email: "Registered in the Hack2Skill team"
+    role: "Team Member"
 
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
-github_repo: "REPLACE_WITH_GITHUB_REPOSITORY_URL"
+github_repo: "https://github.com/Ayush-Kumar0207/Redrob"
 
-sandbox_link: "REPLACE_WITH_SANDBOX_OR_PUBLIC_DOCKER_URL"
+sandbox_link: "https://github.com/Ayush-Kumar0207/Redrob#docker"
 
-reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./686b95d376ce14837de12b88.csv"
 
 # ============================================================================
 # Compute environment
@@ -39,6 +49,8 @@ compute:
   pre_computation_required: false
   pre_computation_time_minutes: 0
   pre_computation_description: "Default submitted pipeline is deterministic and requires no pre-computation."
+  docker_full_pool_runtime_seconds: 162.8
+  docker_output_matches_native_sha256: true
 
 # ============================================================================
 # AI tools declaration
@@ -70,6 +82,8 @@ methodology_summary: |
   5D3502CE69682631A433D3F7FD0E8A710CD01003B4E7FFE2B9648A3B8529B6A1.
   The official validator passes; zero detected
   honeypots and zero very-low-availability profiles in the submitted top 100.
+  A clean Docker build reproduced the full output in 162.8s with the identical
+  SHA-256 hash.
 
 # ============================================================================
 # Declarations
