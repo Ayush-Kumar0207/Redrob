@@ -8,8 +8,20 @@
 - [x] Create a reachable public GitHub repository.
 - [x] Build the Docker image and run a full container reproduction.
 - [x] Publish a public Docker reproduction workflow through the GitHub repository.
-- [x] Export the final presentation deck to PDF.
+- [x] Rebuild the deck inside the organizer-provided 11-slide PPT template.
+- [x] Export and visually verify the 11-page final PDF.
+- [x] Confirm the final PDF is below the portal's 5 MB limit (1.64 MB).
+- [x] Revalidate the participant-ID CSV with the official validator and audit.
 - [ ] Upload the participant-ID CSV and final PDF to the Hack2Skill portal.
+
+## Portal Upload Files
+
+- GitHub URL: `https://github.com/Ayush-Kumar0207/Redrob`
+- Deck PDF: `output/pdf/redrob_ai_ranker_submission_deck.pdf`
+- Ranked output: `686b95d376ce14837de12b88.csv`
+
+The ranked output is a CSV, which satisfies the portal's accepted CSV/XLSX
+format.
 
 ## Reproduction Gate
 

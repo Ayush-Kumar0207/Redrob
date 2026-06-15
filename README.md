@@ -15,8 +15,8 @@ Measured on the full released pool on Windows 11 / Python 3.12:
 | Check | Result |
 |---|---:|
 | Candidates ranked | 100,000 |
-| End-to-end runtime | 84.6 seconds; deterministic repeat: 82.3 seconds |
-| Docker full-pool runtime | 162.8 seconds |
+| Native CPU runtime | 84.6 seconds; deterministic repeat: 82.3 seconds |
+| Docker reproduction runtime | 162.8 seconds |
 | Network calls during ranking | 0 |
 | GPU required | No |
 | Detected decisive integrity contradictions | 57 |
@@ -176,6 +176,12 @@ Final deliverables are written to `submission.csv`,
 `686b95d376ce14837de12b88.csv`,
 `outputs/redrob_ai_ranker_submission_deck.pptx`, and
 `output/pdf/redrob_ai_ranker_submission_deck.pdf`.
+
+The editable PPTX follows the organizer-provided 11-slide Idea Submission
+Template. The verified upload PDF contains 11 pages and is 1.64 MB, below the
+Hack2Skill portal's 5 MB limit. Upload `686b95d376ce14837de12b88.csv` as the
+ranked output file and `output/pdf/redrob_ai_ranker_submission_deck.pdf` as the
+deck PDF.
 
 ## Important Limitations
 

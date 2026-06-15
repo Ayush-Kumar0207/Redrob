@@ -49,6 +49,7 @@ compute:
   pre_computation_required: false
   pre_computation_time_minutes: 0
   pre_computation_description: "Default submitted pipeline is deterministic and requires no pre-computation."
+  native_cpu_runtime_seconds: 84.6
   docker_full_pool_runtime_seconds: 162.8
   docker_output_matches_native_sha256: true
 
